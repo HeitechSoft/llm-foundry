@@ -32,7 +32,7 @@ train_loader:
       # Note: absolute paths for data_dir are more reliable;
       # relative paths will be interpreted relative to whatever your
       # working directory is when you run `train.py`
-      data_dir: custom_datasets
+      data_dir: custom_datasets/data
     split: train
     ############
     shuffle: true
