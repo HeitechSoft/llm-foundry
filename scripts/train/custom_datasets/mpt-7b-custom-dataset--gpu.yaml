@@ -32,7 +32,7 @@ train_loader:
       # Note: absolute paths for data_dir are more reliable;
       # relative paths will be interpreted relative to whatever your
       # working directory is when you run `train.py`
-      data_dir: custom_datasets/data
+      data_dir: train/custom_datasets/data
     split: train
     ############
     shuffle: true
@@ -73,10 +73,11 @@ global_train_batch_size: 8
 
 # System
 seed: ${global_seed}
-device_eval_batch_size: 1
-device_train_microbatch_size: 1
+device_eval_batch_size: 8
+device_train_microbatch_size: auto
 # device_train_microbatch_size: auto
 precision: amp_bf16
+use_cache: false
 
 # FSDP
 fsdp_config:
